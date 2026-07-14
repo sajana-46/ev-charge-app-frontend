@@ -5,14 +5,23 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Addvehicle from './components/Addvehicle'
 import Viewbooking from './components/Viewbooking'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Addvehicle/>
-    <Viewbooking/>
+    <BrowserRouter>
+    <Routes>
+            
+
+
+      <Route path='/' element={<Addvehicle/>} />
+      <Route path='/viewall' element={<Viewbooking/>} />
+
+    </Routes>
+    </BrowserRouter>
       
     </>
   )
